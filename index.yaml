@@ -1,0 +1,43 @@
+apiVersion: v1
+entries:
+  micro-s1:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-11-08T20:14:12.786905+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 69ed8e50784e1621d4d21ca5be9fc1cfd3397d4860f3eae1d12aec1051c19bbb
+    name: micro-s1
+    type: application
+    urls:
+    - https://hdxt25.github.io/helmchart-microservice-amazon/charts/micro-s1-0.0.1.tgz
+    version: 0.0.1
+  micro-s2:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-11-08T20:14:12.787161+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 2a4e1944e84f4f91aef459d07925c50e617ab35061c450c2c8c8b5ae6e24c440
+    name: micro-s2
+    type: application
+    urls:
+    - https://hdxt25.github.io/helmchart-microservice-amazon/charts/micro-s2-0.0.1.tgz
+    version: 0.0.1
+  microservice-amazon:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2025-11-08T20:14:12.786727+05:30"
+    dependencies:
+    - name: micro-s1
+      repository: file://charts/micro-s1
+      version: 0.0.1
+    - name: micro-s2
+      repository: file://charts/micro-s2
+      version: 0.0.1
+    description: Umbrella Helm chart for micro-s1 and micro-s2
+    digest: b475ced0f1f44ee87fe445f7bb53e66db77431a98f8ecb6da55cd05b47eada2b
+    name: microservice-amazon
+    type: application
+    urls:
+    - https://hdxt25.github.io/helmchart-microservice-amazon/microservice-amazon-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-11-08T20:14:12.785965+05:30"
